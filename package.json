@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "build": "next build",
-    "build:cf": "opennext build",
+    "build:cf": "npx opennext build",
     "dev": "next dev",
     "lint": "next lint",
     "start": "next start"
