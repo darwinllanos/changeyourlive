@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "build": "next build",
+    "build:cf": "opennext build",
     "dev": "next dev",
     "lint": "next lint",
     "start": "next start"
@@ -64,6 +65,7 @@
     "zod": "3.25.67"
   },
   "devDependencies": {
+    "@opennextjs/cloudflare": "^1.14.7",
     "@tailwindcss/postcss": "^4.1.9",
     "@types/node": "^22",
     "@types/react": "^18",
