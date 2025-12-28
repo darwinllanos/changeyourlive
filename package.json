@@ -51,9 +51,9 @@
     "next": "14.2.25",
     "next-themes": "latest",
     "ogl": "latest",
-    "react": "^19",
+    "react": "^18.3.1",
     "react-day-picker": "latest",
-    "react-dom": "^19",
+    "react-dom": "^18.3.1",
     "react-hook-form": "latest",
     "react-resizable-panels": "latest",
     "recharts": "latest",
@@ -61,7 +61,6 @@
     "tailwind-merge": "^2.5.5",
     "tailwindcss-animate": "^1.0.7",
     "vaul": "latest",
-    "vue-router": "latest",
     "zod": "3.25.67"
   },
   "devDependencies": {
