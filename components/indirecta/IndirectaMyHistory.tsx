@@ -7,7 +7,7 @@ export function IndirectaMyHistory () {
     <section className="py-16 px-4 bg-gradient-to-b from-black via-slate-950 to-black">
         <div className="max-w-3xl mx-auto">
           <p className="text-center text-cyan-400 text-xs font-bold tracking-widest mb-4">
-            ATENCIÓN: FUTURO PIONERO DEL CLUB INDIRECTA
+            ATENCIÓN: Te contare mi historia, futuro pionero del club.
           </p>
 
           <h2 className="text-3xl md:text-5xl font-bold text-center mb-6 text-balance">Llegaste por una razón...</h2>
@@ -82,7 +82,7 @@ Independiente del modelo de negocio que elijas, la IA puede acelerar tu camino y
               </div>
 
               <p className="text-slate-300 text-sm leading-relaxed">
-                Fue en ese momento cuando decidí unirme a el CLUB INDIRECTA.
+                Fue en ese momento cuando decidí unirme a el CLUB.
                 Un espacio donde se encuentra todo lo que aprendí en estos años:
                 estrategias probadas, herramientas de IA y el respaldo de una comunidad que te impulsa a avanzar más rápido.
 

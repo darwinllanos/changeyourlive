@@ -13,6 +13,8 @@ import { CuanticoBenefits } from "@/components/saltoscuanticos/CuanticoBenefits"
 import { CuanticoPricing } from "@/components/saltoscuanticos/CuanticoPricing"
 import { CuanticoWhoIsFor } from "@/components/saltoscuanticos/CuanticoWhoIsFor"
 
+import { IndirectaMyHistory } from "@/components/indirecta/IndirectaMyHistory"
+
 
 import { useState } from "react"
 
@@ -36,18 +38,19 @@ export default function SaltosCuanticos() {
 //   }, [])
 
   return (
-    <main className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-black text-white">
+    <main className="min-h-screen from-slate-950 via-slate-900 to-black text-white">
       <CuanticoHero />
       <CuanticoSlider />
       <CuanticoOptions />
       <CuanticoBeneficios />
       <CuanticoInfo />
       <CuanticoGuarantee />
-      <CuanticoWhatIsNot />
+      
       <CuanticoBenefits />
       <CuanticoPricing />
       <CuanticoWhoIsFor />
       <CuanticoQuestion />
+      <IndirectaMyHistory />
     </main>
   )
 }

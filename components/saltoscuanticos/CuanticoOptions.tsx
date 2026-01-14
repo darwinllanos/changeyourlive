@@ -1,5 +1,6 @@
 import { Card } from "@/components/ui/card"
 import { CheckCircle2, X } from "lucide-react"
+import Image from "next/image"
 
 export function CuanticoOptions() {
   return (
@@ -8,6 +9,7 @@ export function CuanticoOptions() {
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
           Ahora tienes <span className="text-cyan-400">dos opciones…</span>
         </h2>
+        <p className="text-3xl md:text-4xl font-bold text-center mb-12">“Elige tu futuro”, “Dos caminos, una decisión”</p>
 
         <div className="grid md:grid-cols-2 gap-8">
           {/* Opción 1 */}
@@ -18,9 +20,16 @@ export function CuanticoOptions() {
               </div>
               <div>
                 <h3 className="text-2xl font-bold text-red-400 mb-2">Opción #1:</h3>
-                <p className="text-lg">Continuar con una vida sin Activos extranjeros virales....</p>
+                <p className="text-lg text-red-400">Continuar con una vida normal, Sin futuro....</p>
               </div>
             </div>
+            <Image
+                src="/icons/resultadostradicional.png"
+                alt="Opción 1"
+                width={100}
+                height={100}
+                className="ml-auto hidden md:block w-full"
+              />
           </Card>
 
           {/* Opción 2 */}
@@ -31,9 +40,16 @@ export function CuanticoOptions() {
               </div>
               <div>
                 <h3 className="text-2xl font-bold text-cyan-400 mb-2">Opción #2:</h3>
-                <p className="text-lg">Vivir de los Activos extranjeros virales</p>
+                <p className="text-lg text-cyan-400">Vivir de los negocios digitales y vivir lo extraordinario!</p>
               </div>
             </div>
+            <Image
+                src="/icons/resultadossaltoscuanticos.png"
+                alt="Opción 1"
+                width={100}
+                height={100}
+                className="ml-auto hidden md:block w-full"
+              />
           </Card>
         </div>
       </div>

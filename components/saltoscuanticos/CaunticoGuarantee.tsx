@@ -9,9 +9,19 @@ export function CuanticoGuarantee() {
           ¿Qué es lo peor que puede pasar <span className="text-cyan-400">si lo intentas?</span>
         </h2>
         <p className="text-xl text-slate-300 mb-8 leading-relaxed">
-          Tienes 7 días para probarlo. Pruébalo y si no te gusta te reembolsamos a tu medio de pago el 100% del dinero.
+          Que no funcione… y sigas exactamente donde estás hoy.  
+          <br />
+          <span className="text-white font-semibold">
+            ¿Y lo mejor? Que cambies el rumbo de tu vida para siempre.
+          </span>
         </p>
-        <p className="text-slate-400">Solo hace basta hacer un clic y tu reembolso será procesado en pocas horas.</p>
+
+        <p className="text-slate-400">
+          El verdadero riesgo no es intentarlo.  
+          <br />
+          El verdadero riesgo es mirar atrás en 5 años y darte cuenta de que
+          <span className="text-cyan-400 font-semibold"> nunca lo intentaste.</span>
+        </p>
       </div>
     </section>
   )

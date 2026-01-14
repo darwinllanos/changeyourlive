@@ -28,18 +28,18 @@ export function CuanticoPricing() {
         </h2>
 
         <div className="bg-gradient-to-br from-slate-900 to-black border-2 border-cyan-500 rounded-2xl p-8 md:p-12 text-center">
-          <p className="text-2xl font-semibold mb-6 text-slate-300">Hoy te llevarás todo esto por solo:</p>
-          <div className="text-6xl md:text-8xl font-bold text-cyan-400 mb-8">$39</div>
+          <p className="text-2xl font-semibold mb-6 text-slate-300">Hoy te llevarás todo esto por:</p>
+          <div className="text-6xl md:text-8xl font-bold text-cyan-400 mb-8">$99 - $2000</div>
 
           <Button
             size="lg"
-            className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-bold text-lg px-12 py-8 h-auto rounded-full mb-4"
+            className="bg-gradient-to-r from-cyan-500 to-cyan-600 hover:from-cyan-600 hover:to-cyan-700 text-white font-bold text-lg px-12 py-8 h-auto rounded-full mb-4"
           >
-            TOCA AQUÍ Y APRENDE A GENERAR MÁS DE $100 USD AL DÍA
+            <a href="https://wa.me/573163746711/?text=Estoy%20listo%20para%20aprender%20a%20generar%20más%20de%20100%20USD%20al%20día%20con%20Saltos%20Cuánticos">TOCA AQUÍ Y APRENDE A GENERAR MÁS DE $100 USD AL DÍA</a>
           </Button>
 
-          <div className="mt-8 bg-orange-500/20 border border-orange-500/50 rounded-lg p-4 inline-block">
-            <p className="text-orange-400 font-semibold text-sm">
+          <div className="mt-8 bg-cyan-500/20 border border-cyan-500/50 rounded-lg p-4 inline-block">
+            <p className="text-cyan-400 font-semibold text-sm">
               ⏰ Oferta termina en: {timeLeft.minutes}:{timeLeft.seconds.toString().padStart(2, "0")}
             </p>
           </div>

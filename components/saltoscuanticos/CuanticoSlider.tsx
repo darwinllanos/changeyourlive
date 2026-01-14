@@ -1,61 +1,199 @@
 "use client"
 
-export function CuanticoSlider() {
-  return (
-    <section className="py-16 px-4 bg-slate-950">
-      <div className="max-w-6xl mx-auto text-center">
-        <h2 className="text-3xl md:text-5xl font-bold mb-4">
-          PDTA: ¿Si un niño de 13 años pudo,{" "}
-          <span className="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
-            por qué tú no?
-          </span>
-        </h2>
+import type React from "react"
 
-        <div className="mt-12 overflow-hidden relative">
-          <div className="flex gap-6 animate-scroll">
-            {/* Duplicamos las imágenes para loop infinito */}
-            {[...Array(2)].map((_, setIndex) => (
-              <div key={setIndex} className="flex gap-6 shrink-0">
-                <img
-                  src="/young-person-checking-phone-with-financial-graphs-.jpg"
-                  alt="Joven verificando teléfono con gráficos financieros"
-                  className="w-80 h-96 object-cover rounded-2xl"
-                />
-                <img
-                  src="/young-entrepreneur-with-cap-in-urban-setting.jpg"
-                  alt="Joven emprendedor con gorra en entorno urbano"
-                  className="w-80 h-96 object-cover rounded-2xl"
-                />
-                <img
-                  src="/person-with-headphones-in-purple-neon-lighting-wor.jpg"
-                  alt="Persona con auriculares en iluminación neón morada"
-                  className="w-80 h-96 object-cover rounded-2xl"
-                />
-                <img
-                  src="/three-people-at-business-conference-with-badges-sm.jpg"
-                  alt="Tres personas en conferencia de negocios con credenciales"
-                  className="w-80 h-96 object-cover rounded-2xl"
-                />
-                <img
-                  src="/young-person-holding-award-trophy-proudly.jpg"
-                  alt="Joven sosteniendo trofeo con orgullo"
-                  className="w-80 h-96 object-cover rounded-2xl"
-                />
-                <img
-                  src="/phone-screen-showing-sales-notifications-and-commi.jpg"
-                  alt="Pantalla de teléfono mostrando notificaciones de ventas"
-                  className="w-80 h-96 object-cover rounded-2xl"
-                />
-                <img
-                  src="/hands-holding-phone-showing-business-dashboard.jpg"
-                  alt="Manos sosteniendo teléfono mostrando panel de negocios"
-                  className="w-80 h-96 object-cover rounded-2xl"
-                />
-              </div>
-            ))}
+import { useState, useRef, useEffect } from "react"
+import Image from "next/image"
+
+export function CuanticoSlider() {
+  const sliderRef = useRef<HTMLDivElement>(null)
+    const [isDragging, setIsDragging] = useState(false)
+    const [startX, setStartX] = useState(0)
+    const [scrollLeft, setScrollLeft] = useState(0)
+  
+    useEffect(() => {
+    const slider = sliderRef.current
+    if (!slider || isDragging) return
+  
+    const halfScrollWidth = slider.scrollWidth / 1
+  
+    const interval = setInterval(() => {
+      if (slider.scrollLeft >= halfScrollWidth) {
+        slider.scrollLeft -= halfScrollWidth
+      } else {
+        slider.scrollLeft += 1
+      }
+    }, 30)
+  
+    return () => clearInterval(interval)
+  }, [isDragging])
+  
+  
+    const handleMouseDown = (e: React.MouseEvent) => {
+    if (!sliderRef.current) return
+    setIsDragging(true)
+    sliderRef.current.style.scrollBehavior = "auto"
+    setStartX(e.pageX - sliderRef.current.offsetLeft)
+    setScrollLeft(sliderRef.current.scrollLeft)
+  }
+  
+    const handleMouseMove = (e: React.MouseEvent) => {
+      if (!isDragging || !sliderRef.current) return
+      e.preventDefault()
+      const x = e.pageX - sliderRef.current.offsetLeft
+      const walk = (x - startX) * 2
+      sliderRef.current.scrollLeft = scrollLeft - walk
+    }
+  
+    
+  const handleMouseUp = () => {
+    setIsDragging(false)
+    if (sliderRef.current) {
+      sliderRef.current.style.scrollBehavior = "smooth"
+    }
+  }
+  
+    const handleMouseLeave = () => {
+      setIsDragging(false)
+    }
+  
+      return (
+          <section className="py-20 px-4 from-black via-slate-950 to-black overflow-hidden">
+          <div className="max-w-7xl mx-auto">
+            <h2 className="text-4xl md:text-6xl font-bold text-center mb-16 text-balance">
+              PDTA: ¿Si jovenes de entre 16 - 18 años pueden,{" "}
+              <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-purple-600 bg-clip-text text-transparent">
+                por qué tú no?
+              </span>
+            </h2>
+  
+            <div
+              ref={sliderRef}
+              onMouseDown={handleMouseDown}
+              onMouseMove={handleMouseMove}
+              onMouseUp={handleMouseUp}
+              onMouseLeave={handleMouseLeave}
+              className="flex gap-6 overflow-x-hidden cursor-grab active:cursor-grabbing select-none"
+              style={{ scrollBehavior: isDragging ? "auto" : "smooth" }}
+            >
+              {/* Duplicamos las imágenes para crear el efecto de loop infinito */}
+              {[...Array(2)].map((_, setIndex) => (
+                <div key={setIndex} className="flex gap-6 shrink-0">
+                  <div className="w-[300px] h-[400px] rounded-2xl overflow-hidden shrink-0 relative">
+                    <Image
+                      src="icons/circlethree.jpg"
+                      alt="Persona viendo resultados en celular"
+                      width={300}
+                      height={400}
+                      className="w-full h-full object-cover pointer-events-none"
+                      draggable={false}
+                    />
+                  </div>
+  
+                  <div className="w-[300px] h-[400px] rounded-2xl overflow-hidden shrink-0 relative">
+                    <Image
+                      src="icons/circletwo.jpg"
+                      alt="Joven emprendedor"
+                      width={300}
+                      height={400}
+                      className="w-full h-full object-cover pointer-events-none"
+                      draggable={false}
+                    />
+                  </div>
+  
+                  <div className="w-[300px] h-[400px] rounded-2xl overflow-hidden shrink-0 relative">
+                    <Image
+                      src="icons/circlefour.jpg"
+                      alt="Persona trabajando con auriculares"
+                      width={300}
+                      height={400}
+                      className="w-full h-full object-cover pointer-events-none"
+                      draggable={false}
+                    />
+                  </div>
+  
+                  <div className="w-[300px] h-[400px] rounded-2xl overflow-hidden shrink-0 relative">
+                    <Image
+                      src="icons/circlefive.jpg"
+                      alt="Conferencia de negocios"
+                      width={300}
+                      height={400}
+                      className="w-full h-full object-cover pointer-events-none"
+                      draggable={false}
+                    />
+                  </div>
+  
+                  <div className="w-[300px] h-[400px] rounded-2xl overflow-hidden shrink-0 relative">
+                    <Image
+                      src="icons/circleseven.jpg"
+                      alt="Persona con premio"
+                      width={300}
+                      height={400}
+                      className="w-full h-full object-cover pointer-events-none"
+                      draggable={false}
+                    />
+                  </div>
+  
+                  <div className="w-[300px] h-[400px] rounded-2xl overflow-hidden shrink-0 relative">
+                    <Image
+                      src="icons/circlesix.jpg"
+                      alt="Notificaciones de ventas"
+                      width={300}
+                      height={400}
+                      className="w-full h-full object-cover pointer-events-none"
+                      draggable={false}
+                    />
+                  </div>
+  
+                  <div className="w-[300px] h-[400px] rounded-2xl overflow-hidden shrink-0 relative">
+                    <Image
+                      src="icons/circleeight.jpg"
+                      alt="Dashboard de negocios"
+                      width={300}
+                      height={400}
+                      className="w-full h-full object-cover pointer-events-none"
+                      draggable={false}
+                    />
+                  </div>
+
+                  <div className="w-[300px] h-[400px] rounded-2xl overflow-hidden shrink-0 relative">
+                    <Image
+                      src="icons/circlenine.jpg"
+                      alt="Dashboard de negocios"
+                      width={300}
+                      height={400}
+                      className="w-full h-full object-cover pointer-events-none"
+                      draggable={false}
+                    />
+                  </div>
+
+                  <div className="w-[300px] h-[400px] rounded-2xl overflow-hidden shrink-0 relative">
+                    <Image
+                      src="icons/circleone.jpg"
+                      alt="Dashboard de negocios"
+                      width={300}
+                      height={400}
+                      className="w-full h-full object-cover pointer-events-none"
+                      draggable={false}
+                    />
+                  </div>
+
+                  <div className="w-[300px] h-[400px] rounded-2xl overflow-hidden shrink-0 relative">
+                    <Image
+                      src="icons/circleten.jpg"
+                      alt="Dashboard de negocios"
+                      width={300}
+                      height={400}
+                      className="w-full h-full object-cover pointer-events-none"
+                      draggable={false}
+                    />
+                  </div>
+                </div>
+              ))}
+            </div>
+  
+            <p className="text-center text-slate-400 text-sm mt-8 italic">Arrastra para explorar más testimonios</p>
           </div>
-        </div>
-      </div>
-    </section>
-  )
+        </section>
+      );
 }
