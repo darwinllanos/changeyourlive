@@ -31,7 +31,7 @@ export function CuanticoHero() {
 
         <Button
           size="lg"
-          className="bg-gradient-to-r from-cyan-500 to-cyan-600 hover:from-cyan-500 hover:to-cyan-700 text-white font-bold text-lg px-8 py-6 h-auto rounded-full"
+          className="bg-gradient-to-r from-cyan-500 to-cyan-600 hover:from-cyan-500 hover:to-cya  n-700 text-white font-bold text-lg px-8 py-6 h-auto rounded-full"
         >
           <a href="https://wa.me/573163746711/?text=Estoy%20listo%20para%20aprender%20a%20generar%20más%20de%20100%20USD%20al%20día%20con%20Saltos%20Cuánticos">
             TOCA AQUÍ Y APRENDE A GENERAR MÁS DE $100 USD AL DÍA

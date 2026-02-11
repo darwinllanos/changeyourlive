@@ -7,6 +7,7 @@ import { IndirectaQuestions } from "@/components/indirecta/IndirectaQuestions"
 import { IndirectaPlans } from "@/components/indirecta/IndirectaPlans"
 import { IndirectaMyHistory } from "@/components/indirecta/IndirectaMyHistory"
 import { IndirectaTestimony } from "@/components/indirecta/IndirectaTestimony"
+import { IndirectaLider } from "@/components/indirecta/IndirectaLider"
 
 export const dynamic = "force-static"
 
@@ -16,6 +17,7 @@ export default function IndirectaPage() {
       <IndirectaHero />
       <IndirectaMyHistory />
       <IndirectaTestimony />
+      <IndirectaLider />
       <IndirectaPositioning />
       <IndirectaModules />
       <IndirectaBenefits />
