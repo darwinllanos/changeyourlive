@@ -1,5 +1,6 @@
 import { SiteHeader } from "@/components/site-header"
 import { Hero } from "@/components/hero"
+import { TextImageSection } from "@/components/text-image"
 import { Features } from "@/components/features"
 import CircleRows from "@/components/circle-rows"
 // import { LogoMarquee } from "@/components/logo-marquee"
@@ -54,19 +55,18 @@ export default function Page() {
     "@context": "https://schema.org",
     "@type": "WebPage",
     "@id": "https://theskitbit.com/",
-    name: "Skitbit | 3D Animation Made Simple, Reliable & Scalable",
+    name: "CYL180 | Cambia tu vida en 180 dias",
     description:
-      "From product launches to full-scale campaigns, Skitbit delivers 3D animation that’s fast, consistent, and built to wow your audience.",
+      "Te demostrare como 180 dias enfocados pueden cambiar tu vida. Descubre nuestros productos digitales diseñados para ayudarte a alcanzar tus metas y transformar tu vida en solo 180 dias.",
     url: "https://theskitbit.com/",
     mainEntity: {
       "@type": "Organization",
       name: "Skitbit",
-      url: "https://theskitbit.com",
-      sameAs: [
-        "https://twitter.com/theskitbit",
-        "https://www.youtube.com/@skitbitinternational",
-        "https://instagram.com/theskitbit",
-        "https://threads.com/theskitbit",
+      url: "https://changeyourlive180.com",
+      sameAs: [  
+        "https://www.youtube.com/@changeyourlive180",
+        "https://instagram.com/changeyourlive180",
+        "https://threads.com/changeyourlive180",
       ],
     },
     hasPart: [
@@ -84,8 +84,22 @@ export default function Page() {
       <main className="min-h-[100dvh] text-white">
         <SiteHeader />
         <Hero />
-        <CircleRows fullWidth={true} sizeClass="min-w-24 min-h-24 sm:min-w-28 sm:min-h-28 md:min-w-32 md:min-h-32" />
-        <Features />
+
+        <TextImageSection
+          title="Mi Transformacion en 180 Dias"
+          description="En 2025 me rodee de un grupo de personas que me inspiraron a cambiar mi vida. En 180 dias, intento transformar mi salud, mi mentalidad y mis finanzas. Ahora quiero compartir contigo las herramientas y estrategias que me ayudaran y me estan ayudando a conseguirlo."
+          ctas={[
+            { label: "Tu vida sin cambio", href: "https://vt.tiktok.com/ZSuFc1A42/" },
+            { label: "Vida con cambio", href: "https://vt.tiktok.com/ZSuFtwH3m/" },
+            { label: "Comienza ahora", href: "https://wa.me/3163746711" },
+          ]}
+          imageSrc="/images/CYAN180H.png"
+          imageAlt="Persona celebrando logro frente a una pantalla"
+          imagePosition="right"
+        />
+
+        <CircleRows fullWidth={true} sizeClass="min-w-16 min-h-16 sm:min-w-20 sm:min-h-20 md:min-w-24 md:min-h-24" />
+        {/* <Features /> */}
         <AppverseFooter />
       </main>
 

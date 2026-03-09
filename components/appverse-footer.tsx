@@ -4,7 +4,7 @@ import { useEffect, useState } from "react"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
-import { Instagram, Twitter, Youtube, MessageCircle } from "lucide-react"
+import { Instagram, Youtube, Facebook, Music } from "lucide-react"
 import LazyVideo from "./lazy-video"
 import Image from "next/image"
 
@@ -124,22 +124,22 @@ export function AppverseFooter() {
               <div>
                 <h5 className="mb-2 text-xs font-semibold uppercase tracking-widest text-neutral-400">Redes Sociales Innova</h5>
                 <ul className="space-y-2 text-sm text-neutral-300">
-                  {/* <li className="flex items-center gap-2">
-                    <Twitter className="h-4 w-4 text-neutral-400" />
+                  <li className="flex items-center gap-2">
+                    <Facebook className="h-4 w-4 text-neutral-400" />
                     <a
-                      href="https://twitter.com/theskitbit"
+                      href="https://www.facebook.com/people/Change-Your-Live-180/61585954080494/?sk=reels_tab"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="hover:text-lime-300"
                       aria-label="Follow skitbit on Twitter"
                     >
-                      X/Twitter
+                      Facebook
                     </a>
-                  </li> */}
-                  {/* <li className="flex items-center gap-2">
+                  </li>
+                  <li className="flex items-center gap-2">
                     <Youtube className="h-4 w-4 text-neutral-400" />
                     <a
-                      href="https://www.youtube.com/@skitbitinternational"
+                      href="https://www.youtube.com/@changeyourlive180"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="hover:text-lime-300"
@@ -147,11 +147,11 @@ export function AppverseFooter() {
                     >
                       YouTube
                     </a>
-                  </li> */}
+                  </li>
                   <li className="flex items-center gap-2">
                     <Instagram className="h-4 w-4 text-neutral-400" />
                     <a
-                      href="https://www.instagram.com/oficial.innova?igsh=MW5meXFsNzhqcnB0bg=="
+                      href="https://www.instagram.com/changeyourlive180/"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="hover:text-lime-300"
@@ -160,18 +160,18 @@ export function AppverseFooter() {
                       Instagram
                     </a>
                   </li>
-                  {/* <li className="flex items-center gap-2">
-                    <MessageCircle className="h-4 w-4 text-neutral-400" />
+                  <li className="flex items-center gap-2">
+                    <Music className="h-4 w-4 text-neutral-400" />
                     <a
-                      href="https://threads.com/theskitbit"
+                      href="https://www.tiktok.com/@180changeyourlive"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="hover:text-lime-300"
                       aria-label="Follow skitbit on Threads"
                     >
-                      Threads
+                      Tiktok
                     </a>
-                  </li> */}
+                  </li>
                 </ul>
               </div>
             </div>

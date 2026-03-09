@@ -1,12 +1,13 @@
 import { Button } from "@/components/ui/button"
 import Image from "next/image"
 import LazyVideo from "./lazy-video"
+import { TextImageSection } from "@/components/text-image"
 
 export function Hero() {
   const buttonNew = (
     <Button asChild className="rounded-full bg-lime-400 px-6 text-black hover:bg-lime-300">
-      <a href="https://wa.me/3163746711" target="_blank" rel="noopener noreferrer">
-        Contactame
+      <a href="/frases" target="_blank" rel="noopener noreferrer">
+        Frase del dia
       </a>
     </Button>
   )
@@ -22,12 +23,12 @@ export function Hero() {
           <h1 className="mt-3 text-center text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl">
             <span className="block">CAMBIA TU VIDA</span>
             <span className="block text-lime-300 drop-shadow-[0_0_20px_rgba(132,204,22,0.35)]">EN 180 DIAS</span>
-            <span className="block">JUNTO CON INNOVA</span>
+            {/* <span className="block">JUNTO CON MIGO</span> */}
           </h1>
           <div className="mt-6">{buttonNew}</div>
 
           {/* Phone grid mimic */}
-          <div className="mt-10 grid w-full gap-4 grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5">
+          {/*<div className="mt-10 grid w-full gap-4 grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5">
             {phoneData.map((p, i) => {
               const visibility = i <= 2 ? "block" : i === 3 ? "hidden md:block" : i === 4 ? "hidden xl:block" : "hidden"
 
@@ -37,7 +38,8 @@ export function Hero() {
                 </div>
               )
             })}
-          </div>
+          </div>*/}
+
         </div>
       </div>
     </section>
