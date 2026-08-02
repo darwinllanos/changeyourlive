@@ -5,28 +5,65 @@ export default function FAQPage() {
   return (
     <>
       <SiteHeader />
-      <section className="bg-[#0a0a0a] text-white py-16">
+      <section className=" text-white py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="relative overflow-hidden rounded-3xl liquid-glass p-6 sm:p-10 shadow-xl">
               <div className="relative space-y-12">
                 <header className="space-y-4">
-                  <h1 className="text-4xl font-bold tracking-tight text-lime-300">Que ganas con nuestra comunidad?</h1>
-                  <p className="text-neutral-400 text-lg">
-                    Te quiero hacer las siguientes preguntas, las cuales quiero que respondas de manera sincera:
-                  </p>
-                  <p>Contexto: Si nuestro objetivo es lograr que nuestros socios ganen 100.000 USD en un año o mas.</p>
-                  <p className="text-neutral-400 text-lg">
-                     1. Tu trabajo actual te permite alcanzar esa meta financiera?
-                  </p>
-                  <p className="text-neutral-400 text-lg">
-                    2. Has intentado emprender por tu cuenta y no has logrado resultados consistentes?
-                  </p>
-                  <p className="text-neutral-400 text-lg">
-                    3. Cuentas con el conocimiento y la disciplina necesaria para generar ingresos pasivos a traves de diferentes fuentes digitales?
-                  </p>
-                  <p className="text-lime-300">Si la respuestas a estas preguntas son negativas, innova sera tu mejor aliado para cambiar tu situacion financiera.</p>
-                </header>
+  <h1 className="text-4xl font-bold tracking-tight text-lime-300">
+    ¿Qué puedes ganar en esta comunidad?
+  </h1>
+
+  <p className="text-neutral-400 text-lg">
+    Antes de mostrarte todo lo que encontrarás aquí, quiero hacerte unas preguntas.
+    Respóndelas con total sinceridad.
+  </p>
+
+  <p className="text-neutral-300">
+    En la vida existen muchas maneras de generar ingresos, pero la mayoría de las
+    personas termina eligiendo una de estas dos:
+  </p>
+
+  <p className="text-neutral-300">
+    <span className="font-semibold text-lime-300">Dependiendo:</span> Trabajas
+    para alguien más. Tu sueldo, tus horarios y gran parte de tu tiempo son
+    definidos por otras personas. Tienes estabilidad, pero también un límite.
+  </p>
+
+  <p className="text-neutral-300">
+    <span className="font-semibold text-lime-300">Emprendiendo:</span> Decides
+    cuánto quieres crecer. Tus ingresos dependen de las habilidades que desarrolles,
+    del valor que aportes y del esfuerzo que estés dispuesto a realizar. No tiene
+    límites, pero requiere aprendizaje y compromiso.
+  </p>
+
+  <p className="text-neutral-400 text-lg">
+    <strong>1.</strong> Si tuvieras la oportunidad, ¿preferirías decidir cuánto
+    quieres ganar o dejar que alguien más establezca ese límite?
+  </p>
+
+  <p className="text-neutral-400 text-lg">
+    <strong>2.</strong> ¿Prefieres esperar unas vacaciones al año o trabajar para
+    construir una vida donde tengas mayor libertad sobre tu tiempo?
+  </p>
+
+  <p className="text-neutral-400 text-lg">
+    <strong>3.</strong> ¿Crees que una persona que aprende constantemente puede
+    cambiar su futuro financiero?
+  </p>
+
+  <p className="text-lime-300 text-lg font-medium italic">
+    Si tus respuestas fueron sí, entonces ya tienes lo más importante: la
+    disposición para crecer. Recuerda:
+    <br /><br />
+    "Todo lo que la mente humana puede concebir y creer, también puede lograr."
+  </p>
+
+  <p className="text-white text-xl font-semibold">
+    Con CYL180:
+  </p>
+</header>
 
                 <section className="space-y-3">
                   <h2 className="text-2xl font-semibold text-white">
@@ -34,7 +71,7 @@ export default function FAQPage() {
                   </h2>
                   <p className="text-lime-300">No pongas todos los huevos en la misma canasta.</p>
                   <p className="text-neutral-300">
-                    Al diversificar tus fuentes de ingreso mediante nuestros productos digitales, reduces tu dependencia de un solo trabajo o sueldo. Nuestros socios han reportado ingresos adicionales de hasta $2000 mensuales o más, dependiendo de su constancia y estrategia.
+                    Aprende a hacer la transicion de Empleado a Emprendedor y de Emprendedor a Empresario, genera dinero con una habilidad y potencialo con marca personal.
                   </p>
                 </section>
 
@@ -75,18 +112,16 @@ export default function FAQPage() {
                 </section>
 
                 <section className="space-y-3">
-                  <h2 className="text-2xl font-semibold text-white">6. Acceso a canal de Travel</h2>
-                  <p className="text-lime-300">Convierte tu pasión por viajar en una fuente de ingresos.</p>
+                  <h2 className="text-2xl font-semibold text-white">6. Seguimiento sobre mis resultados</h2>
+                  <p className="text-lime-300">Valida mi proceso y verifica mis resultados</p>
                   <p className="text-neutral-300">
-                    No solo disfrutarás de viajes a precios exclusivos, sino que también podrás generar ingresos gracias a convenios con una plataforma de turismo que ofrece tarifas preferenciales. 
-    Tendrás la posibilidad de revender paquetes de viaje a precios competitivos, obteniendo ganancias por cada venta realizada. 
-    Así, transformas tus experiencias de viaje en una oportunidad de negocio rentable y escalable.
+                    Te mostrare mis resultados y te enseñare a replicar mi proceso, para que puedas validar que lo que enseño funciona y puedas aplicarlo en tu vida.
                   </p>
                 </section>
 
                 <section className="space-y-3">
                   <h2 className="text-2xl font-semibold text-white">
-                    7. Se parte de una comunidad de emprendedores digitales
+                    7. Se parte de una comunidad de emprendedores y empresarios
                   </h2>
                   <p className="text-lime-300">Rodeate de quienes te impulsen, no de quienes te limiten</p>
                   <p className="text-neutral-300">
@@ -95,10 +130,10 @@ export default function FAQPage() {
                 </section>
 
                 <section className="space-y-3">
-                  <h2 className="text-2xl font-semibold text-white">8. Acceso a plataforma Inntv</h2>
-                  <p className="text-lime-300">El conocimiento es poder, y en Innova te damos las herramientas para empoderarte.</p>
+                  <h2 className="text-2xl font-semibold text-white">8. Acceso a informacion de transformacion</h2>
+                  <p className="text-lime-300">El conocimiento es poder, y en CYL180 te damos las herramientas para ser imparable</p>
                   <p className="text-neutral-300">
-                    Obtendrás acceso exclusivo a la plataforma Innova, donde aprenderás estrategias digitales probadas y recibirás mentorías de expertos nacionales e internacionales. Tu inversión se transforma en educación práctica y rentable.
+                    Obtendrás acceso exclusivo a CYL180, donde aprenderás estrategias que en lo personal cambiaron mi visión en la vida. Tu inversión se transforma en educación práctica y rentable.
                     {/* can view our detailed pricing on our{" "}
                     <a href="/pricing" className="text-lime-300 underline">
                       pricing page
@@ -109,7 +144,7 @@ export default function FAQPage() {
 
                 <section className="space-y-3">
                   <h2 className="text-2xl font-semibold text-white">
-                    9. Acceso a canal de InnAcademy
+                    9. Acceso a entrenamiento de mentalidad y desarrollo personal
                   </h2>
                   <p className="text-lime-300">Una mente sin entrenar no puede lograr nada.</p>
                   <p className="text-neutral-300">
@@ -134,7 +169,7 @@ export default function FAQPage() {
           </div>
         </div>
       </section>
-      <AppverseFooter />
+      {/* <AppverseFooter /> */}
     </>
   )
 }

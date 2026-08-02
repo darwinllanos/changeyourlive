@@ -11,10 +11,10 @@ import { Analytics } from "@vercel/analytics/react"
 const inter = Inter({ subsets: ["latin"], display: "swap" })
 
 export const metadata: Metadata = {
-  title: "INNOVA | Cambia tu vida en 180 dias",
+  title: "CYL180 | Cambia tu vida en 180 dias",
   description:
-    "Universidad que te formara como emprendedor digital en 180 dias, adquiere habilidades en trading, dropshipping, marca personal y viajes.",
-  generator: "v0.app",
+    "Universidad que te formara como emprendedor digital en 180 dias, adquiere habilidades en trading y marca personal para cambiar tu vida.",
+  generator: "v0",
 }
 
 export default function RootLayout({

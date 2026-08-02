@@ -27,20 +27,20 @@ export function SiteHeader() {
       icon: Building2,
       description: "Diversifica tus ingresos con trading profesional",
     },
-    {
+    /*{
       // href: "/3d-product-rendering",
       href: "/dropshipping",
       label: "Dropshipping",
       icon: Package,
       description: "Gana dinero adicional con dropshipping",
-    },
+    },*/
     {
       href: "/personalbrand",
       label: "Marca Personal",
       icon: Package,
       description: "Construye y monetiza tu marca personal",
     },
-    {
+    /*{
       href: "/networking",
       label: "Network Marketing",
       icon: Package,
@@ -51,7 +51,7 @@ export function SiteHeader() {
       label: "Travel",
       icon: Package,
       description: "Gana dinero vendiendo viajes",
-    }
+    }*/
   ]
 
   const links = [

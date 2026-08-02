@@ -1,10 +1,12 @@
 import { SiteHeader } from "@/components/site-header"
-import { Hero } from "@/components/hero"
 import { TextImageSection } from "@/components/text-image"
+import { HeroSection } from "@/components/hero-section"
+import { Pricing } from "@/components/pricing"
+import { Hero } from "@/components/hero"
 import { Features } from "@/components/features"
 import CircleRows from "@/components/circle-rows"
 // import { LogoMarquee } from "@/components/logo-marquee"
-// import { Pricing } from "@/components/pricing"
+
 import { AppverseFooter } from "@/components/appverse-footer"
 import Script from "next/script"
 
@@ -18,33 +20,33 @@ export default function Page() {
     "@type": "WebPageElement",
     "@id": "https://theskitbit.com/#pricing",
     name: "Change Your Life in 180 Days",
-    description: "Cambia tu vida en 180 dias con nuestros productos digitales",
+    description: "Cambia tu vida en 180 dias",
     url: "https://theskitbit.com/#pricing",
     mainEntity: {
       "@type": "PriceSpecification",
-      name: "3D Animation Services",
-      description: "Professional 3D animation services with three pricing tiers",
+      name: "Change Your Life in 180 Days",
+      description: "Cambia tu vida en 180 dias",
       offers: [
         {
           "@type": "Offer",
-          name: "Startup Plan",
-          price: "299",
+          name: "Trading Basic Plan",
+          price: "10",
           priceCurrency: "USD",
-          description: "Up to 15s 3D Animation with 2 revisions",
+          description: "Aprende los fundamentos del trading y la gestión de riesgos básica.",
         },
         {
           "@type": "Offer",
-          name: "Pro Plan",
-          price: "699",
+          name: "Trading Pro Plan",
+          price: "33",
           priceCurrency: "USD",
-          description: "Up to 25s 3D Animation with 4 revisions",
+          description: "Aprende estrategias avanzadas de trading y gestión de riesgos.",
         },
         {
           "@type": "Offer",
-          name: "Premium Plan",
-          price: "2049",
+          name: "Marca Personal Plan",
+          price: "33",
           priceCurrency: "USD",
-          description: "40-60s 3D Animation with unlimited revisions",
+          description: "Aprende a crear y gestionar tu marca personal de forma efectiva.",
         },
       ],
     },
@@ -84,8 +86,8 @@ export default function Page() {
       <main className="min-h-[100dvh] text-white">
         <SiteHeader />
         <Hero />
-
-        <TextImageSection
+        <HeroSection />
+        {/* <TextImageSection
           title="Mi Transformacion en 180 Dias"
           description="En 2025 me rodee de un grupo de personas que me inspiraron a cambiar mi vida. En 180 dias, intento transformar mi salud, mi mentalidad y mis finanzas. Ahora quiero compartir contigo las herramientas y estrategias que me ayudaran y me estan ayudando a conseguirlo."
           ctas={[
@@ -96,11 +98,12 @@ export default function Page() {
           imageSrc="/images/CYAN180H.png"
           imageAlt="Persona celebrando logro frente a una pantalla"
           imagePosition="right"
-        />
+        /> */}
 
-        <CircleRows fullWidth={true} sizeClass="min-w-16 min-h-16 sm:min-w-20 sm:min-h-20 md:min-w-24 md:min-h-24" />
+        {/* <CircleRows fullWidth={true} sizeClass="min-w-16 min-h-16 sm:min-w-20 sm:min-h-20 md:min-w-24 md:min-h-24" /> */}
         {/* <Features /> */}
-        <AppverseFooter />
+        {/* <Pricing /> */}
+        {/* <AppverseFooter /> */}
       </main>
 
       {/* JSON-LD structured data */}

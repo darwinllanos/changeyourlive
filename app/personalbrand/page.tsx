@@ -20,7 +20,7 @@ export default function page() {
                   </h2>
                   <p className="text-lime-300">Tu marca personal es tu activo mas valioso.</p>
                   <p className="text-neutral-300">
-                    En Innova te enseñamos a convertir tus conocimientos, habilidades y experiencia en una identidad sólida, confiable y rentable en el mundo digital. No se trata solo de vender, sino de posicionarte, generar autoridad y crear oportunidades reales de crecimiento personal y financiero.
+                    En CYL180 te enseñamos a convertir tus conocimientos, habilidades y experiencia en una identidad sólida, confiable y rentable. No se trata solo de vender, sino de posicionarte, generar autoridad y crear oportunidades reales de crecimiento personal y financiero.
                   </p>
                 </section>
 
