@@ -12,7 +12,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { SiteHeader } from "@/components/site-header"
 
 type TradeMethod = "Metodología IA" | "Metodología Personal"
-type TradeOutcome = "win" | "loss"
+type TradeOutcome = "win" | "loss" 
 
 type Trade = {
   id: string
@@ -48,6 +48,46 @@ const INITIAL_TRADES: Trade[] = [
     notes: "Ruptura falsa, se cerró con pérdida controlada.",
     outcome: "loss",
   },*/
+  {
+    id: "t3",
+    date: "2026-08-03",
+    method: "Metodología Personal",
+    symbol: "XAUUSD",
+    entryLink: "https://www.tradingview.com/x/knHZU3ne/",
+    pnl: 0,
+    notes: "Niveles de interes no tomada",
+    outcome: "win",
+  },
+  {
+    id: "t4",
+    date: "2026-08-03",
+    method: "Metodología IA",
+    symbol: "XAUUSD",
+    entryLink: "https://www.tradingview.com/x/erysPUy1/",
+    pnl: 11.25,
+    notes: "IA, Toma de Parciales",
+    outcome: "LOSS",
+  },
+  {
+    id: "t5",
+    date: "2026-08-04",
+    method: "Metodología Personal",
+    symbol: "XAUUSD",
+    entryLink: "https://www.tradingview.com/x/BHbPgCik/",
+    pnl: 3,
+    notes: "Order Block, Niveles Reelevantes: Cierre parcial",
+    outcome: "win",
+  },
+  {
+    id: "t6",
+    date: "2026-08-04",
+    method: "Metodología IA",
+    symbol: "XAUUSD",
+    entryLink: "https://www.tradingview.com/x/4bLkTGOL/",
+    pnl: -15.55,
+    notes: "Order Block, Niveles Reelevantes: Cierre parcial",
+    outcome: "LOSS",
+  },
 ]
 
 function parseImportedTrades(rawText: string): Trade[] {
