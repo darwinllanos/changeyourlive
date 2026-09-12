@@ -1,5 +1,9 @@
+"use client"
+
+import * as React from "react"
 import Link from "next/link"
 import { SiteHeader } from "@/components/site-header"
+import { Button } from "@/components/ui/button"
 import { tradingModules } from "@/lib/trading"
 
 export default function TradingSubmodulePage({
@@ -7,8 +11,17 @@ export default function TradingSubmodulePage({
 }: {
   params: { submodule: string }
 }) {
+  const [answers, setAnswers] = React.useState<Record<string, boolean>>({})
+
   const module = tradingModules.find((item) => item.id === "base")
   const submodule = module?.submodules?.find((item) => item.id === params.submodule)
+
+  function handleAnswer(questionId: string, value: boolean) {
+    setAnswers((prev) => ({
+      ...prev,
+      [questionId]: value,
+    }))
+  }
 
   if (!module || !submodule) {
     return (
@@ -111,13 +124,49 @@ export default function TradingSubmodulePage({
         <section className="mt-8 rounded-3xl border border-slate-700 bg-slate-900/80 p-6 sm:p-8">
           <h2 className="text-2xl font-semibold text-white">Preguntas de repaso</h2>
           <div className="mt-6 space-y-4">
-            {submodule.questions.map((question) => (
-              <div key={question.id} className="rounded-2xl border border-slate-800 bg-slate-950/70 p-4">
-                <p className="font-medium text-white">{question.statement}</p>
-                <p className="mt-2 text-sm text-slate-300">Respuesta: {question.answer ? "Correcto" : "Incorrecto"}</p>
-                <p className="mt-2 text-sm text-slate-400">{question.explanation}</p>
-              </div>
-            ))}
+            {submodule.questions.map((question) => {
+              const selected = answers[question.id]
+              const isCorrect = selected === question.answer
+
+              return (
+                <div key={question.id} className="rounded-2xl border border-slate-800 bg-slate-950/70 p-4">
+                  <p className="font-medium text-white">{question.statement}</p>
+
+                  <div className="mt-3 flex flex-wrap gap-3">
+                    <Button
+                      type="button"
+                      size="sm"
+                      variant={selected === true ? "secondary" : "outline"}
+                      className={selected === true ? "bg-[#a3e635] text-black hover:bg-[#b4f04a] border-[#a3e635] shadow-sm" : "border-slate-600 bg-slate-900 text-slate-200 hover:bg-slate-800 hover:text-white"}
+                      onClick={() => handleAnswer(question.id, true)}
+                    >
+                      Verdadero
+                    </Button>
+                    <Button
+                      type="button"
+                      size="sm"
+                      variant={selected === false ? "secondary" : "outline"}
+                      className={selected === false ? "bg-[#a3e635] text-black hover:bg-[#b4f04a] border-[#a3e635] shadow-sm" : "border-slate-600 bg-slate-900 text-slate-200 hover:bg-slate-800 hover:text-white"}
+                      onClick={() => handleAnswer(question.id, false)}
+                    >
+                      Falso
+                    </Button>
+                  </div>
+
+                  {selected !== undefined && (
+                    <div className="mt-4 rounded-xl bg-slate-900/80 p-3 text-sm text-slate-300">
+                      <p className={isCorrect ? "text-emerald-400" : "text-rose-400"}>
+                        {isCorrect ? "Respuesta correcta" : "Respuesta incorrecta"}
+                      </p>
+                      <p className="mt-2 text-slate-300">
+                        La respuesta correcta es: <span className="font-semibold text-white">{question.answer ? "Verdadero" : "Falso"}</span>
+                      </p>
+                      <p className="mt-2 text-slate-400">{question.explanation}</p>
+                    </div>
+                  )}
+                </div>
+              )
+            })}
           </div>
         </section>
       </main>

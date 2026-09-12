@@ -3,7 +3,7 @@
 import * as React from "react"
 import { useMemo, useState } from "react"
 import Link from "next/link"
-import { format, startOfMonth, endOfMonth, eachDayOfInterval, addMonths, subMonths, isSameDay } from "date-fns"
+import { format, startOfMonth, endOfMonth, eachDayOfInterval, addMonths, subMonths, isSameDay, getDay, subDays } from "date-fns"
 import { es } from "date-fns/locale"
 import { ArrowLeft, ArrowRight, BadgeDollarSign, ExternalLink, TrendingDown, TrendingUp, Upload, Wallet2 } from "lucide-react"
 import { Badge } from "@/components/ui/badge"
@@ -48,46 +48,6 @@ const INITIAL_TRADES: Trade[] = [
     notes: "Ruptura falsa, se cerró con pérdida controlada.",
     outcome: "loss",
   },*/
-  {
-    id: "t3",
-    date: "2026-08-03",
-    method: "Metodología Personal",
-    symbol: "XAUUSD",
-    entryLink: "https://www.tradingview.com/x/knHZU3ne/",
-    pnl: 0,
-    notes: "Niveles de interes no tomada",
-    outcome: "win",
-  },
-  {
-    id: "t4",
-    date: "2026-08-03",
-    method: "Metodología IA",
-    symbol: "XAUUSD",
-    entryLink: "https://www.tradingview.com/x/erysPUy1/",
-    pnl: 11,
-    notes: "IA, Toma de Parciales",
-    outcome: "LOSS",
-  },
-  {
-    id: "t5",
-    date: "2026-08-04",
-    method: "Metodología Personal",
-    symbol: "XAUUSD",
-    entryLink: "https://www.tradingview.com/x/BHbPgCik/",
-    pnl: 3,
-    notes: "Order Block, Niveles Reelevantes: Cierre parcial",
-    outcome: "win",
-  },
-  {
-    id: "t6",
-    date: "2026-08-04",
-    method: "Metodología IA",
-    symbol: "XAUUSD",
-    entryLink: "https://www.tradingview.com/x/4bLkTGOL/",
-    pnl: -15,
-    notes: "Order Block, Niveles Reelevantes: Cierre parcial",
-    outcome: "LOSS",
-  },
 ]
 
 function parseImportedTrades(rawText: string): Trade[] {
@@ -130,8 +90,8 @@ export function TradeJournal() {
   const [selectedMonth, setSelectedMonth] = useState<Date>(new Date(2026, 7, 1))
   const [selectedMethod, setSelectedMethod] = useState<TradeFilter>("all")
   const [selectedDay, setSelectedDay] = useState<string>("2026-08-01")
-  const [personalStartingBalance, setPersonalStartingBalance] = useState(1284)
-  const [fundedStartingBalance, setFundedStartingBalance] = useState(9974)
+  const [personalStartingBalance, setPersonalStartingBalance] = useState(1583)
+  const [fundedStartingBalance, setFundedStartingBalance] = useState(9699)
   const [importError, setImportError] = useState("")
 
   const filteredTrades = useMemo(() => {
@@ -141,7 +101,19 @@ export function TradeJournal() {
   const monthDays = useMemo(() => {
     const start = startOfMonth(selectedMonth)
     const end = endOfMonth(selectedMonth)
-    return eachDayOfInterval({ start, end })
+    const days = eachDayOfInterval({ start, end })
+    
+    // Obtener el día de la semana del primer día (0 = domingo, 1 = lunes, ..., 6 = sábado)
+    const firstDayOfWeek = getDay(start)
+    // Ajustar para empezar en lunes (0 = lunes, 1 = martes, ..., 6 = domingo)
+    const daysToAdd = firstDayOfWeek === 0 ? 6 : firstDayOfWeek - 1
+    
+    // Agregar días del mes anterior para llenar los espacios en blanco
+    const paddingDays = Array.from({ length: daysToAdd }, (_, i) => 
+      subDays(start, daysToAdd - i)
+    )
+    
+    return [...paddingDays, ...days]
   }, [selectedMonth])
 
   const tradesByDay = useMemo(() => {
@@ -190,7 +162,7 @@ export function TradeJournal() {
                   Historial de mi trading
                 </Badge>
                 <h1 className="text-3xl font-semibold sm:text-4xl">
-                  Desde el 1 de Agosto de 2026 hasta hoy, he registrado mis operaciones y resultados en este journal.
+                  Desde el 1 de Septiembre de 2026 hasta hoy, he registrado mis operaciones y resultados en este journal.
                 </h1>
                 <p className="text-sm leading-7 text-slate-300 sm:text-base">
                   Aqui podras ver el historial de mis 2 cuentas en donde implemento mis metodologias de trading, la cuenta personal y la cuenta de fondeo. Dentro de estas puedes ingresar el valor de tu capital y el programa te simulara el rendimiento de tu cuenta en base a mis resultados.
@@ -371,22 +343,34 @@ export function TradeJournal() {
                     const dayKey = format(day, "yyyy-MM-dd")
                     const dayTrades = tradesByDay[dayKey] ?? []
                     const isSelected = selectedDay === dayKey
+                    const isCurrentMonth = day.getMonth() === selectedMonth.getMonth()
 
                     return (
                       <button
                         key={dayKey}
-                        onClick={() => setSelectedDay(dayKey)}
-                        className={`min-h-[92px] rounded-2xl border p-2 text-left transition ${isSelected ? "border-lime-400 bg-lime-400/10" : "border-white/10 bg-slate-900/70 hover:border-lime-400/50"}`}
+                        onClick={() => isCurrentMonth && setSelectedDay(dayKey)}
+                        disabled={!isCurrentMonth}
+                        className={`min-h-[92px] rounded-2xl border p-2 text-left transition ${
+                          !isCurrentMonth 
+                            ? "opacity-20 cursor-not-allowed border-white/5 bg-slate-950"
+                            : isSelected 
+                            ? "border-lime-400 bg-lime-400/10" 
+                            : "border-white/10 bg-slate-900/70 hover:border-lime-400/50"
+                        }`}
                       >
-                        <p className="text-sm font-semibold">{format(day, "d")}</p>
-                        <div className="mt-2 space-y-1">
-                          {dayTrades.slice(0, 2).map((trade) => (
-                            <div key={trade.id} className={`rounded-lg px-2 py-1 text-[11px] ${trade.outcome === "win" ? "bg-lime-400/15 text-lime-300" : "bg-rose-400/15 text-rose-300"}`}>
-                              {trade.symbol}
+                        {isCurrentMonth && (
+                          <>
+                            <p className="text-sm font-semibold">{format(day, "d")}</p>
+                            <div className="mt-2 space-y-1">
+                              {dayTrades.slice(0, 2).map((trade) => (
+                                <div key={trade.id} className={`rounded-lg px-2 py-1 text-[11px] ${trade.outcome === "win" ? "bg-lime-400/15 text-lime-300" : "bg-rose-400/15 text-rose-300"}`}>
+                                  {trade.symbol}
+                                </div>
+                              ))}
+                              {dayTrades.length > 2 ? <p className="text-[10px] text-slate-400">+{dayTrades.length - 2} más</p> : null}
                             </div>
-                          ))}
-                          {dayTrades.length > 2 ? <p className="text-[10px] text-slate-400">+{dayTrades.length - 2} más</p> : null}
-                        </div>
+                          </>
+                        )}
                       </button>
                     )
                   })}

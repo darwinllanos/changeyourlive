@@ -38,11 +38,11 @@ export default function page() {
                     <li>💬 Forma parte de una comunidad donde compartimos estrategias, ideas y aprendizaje continuo.</li>
                   </ul>
                   <p className="text-neutral-300">
-                    Aprende la manera en que opero 1 a 1: {" "}
+                    He invertido cerca de 7.000.000 COP en conocimiento y experiencia. Te enseño la manera en que opero 1 a 1 {" "}
                     <a href="https://api.whatsapp.com/send/?phone=573163746711&text&type=phone_number&app_absent=0" className="text-lime-300 underline">
                       contactame
                     </a>{" "}
-                    y hagamos de tu historia un exito.
+                    y hagamos de tu historia un exito, esto sin costo, sale gratis pero todo depende de ti.
                   </p>
                 </section>
               </div>
