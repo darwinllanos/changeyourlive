@@ -93,7 +93,7 @@ export const tradingModules: TradingClassModule[] = [
         description: "Dentro de este mundo del trading existen diferentes mercados financieros, cada uno con sus particularidades y activos específicos. En este submódulo aprenderás sobre los principales mercados y cómo funcionan.",
         highlights: ["Principales Divisas", "Tipos de mercados", "Pares de divisas"],
         videoUrl: "https://www.youtube.com/embed/2Vv-BfVoq4g",
-        imageUrl: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80",
+        imageUrl: "/images/mercados-financieros.jpeg",
         imageAlt: "Análisis de contexto y gráfico de mercado",
         contentBlocks: [
           {
@@ -130,7 +130,7 @@ export const tradingModules: TradingClassModule[] = [
         description: "Entiende qué mueve el precio, Cuando es mejor comprar o vender, porque es mejor una sesion de trading que otra y porque no todos los dias se debe operar en el mercado de divisas.",
         highlights: ["Fundamentales", "Sesiones", "Analisis tecnico"],
         videoUrl: "https://www.youtube.com/embed/4X7aQnRjQqU",
-        imageUrl: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=1200&q=80",
+        imageUrl: "/images/pares-divisas.jpeg",
         imageAlt: "Gráfico de mercado y análisis financiero",
         contentBlocks: [
           {
@@ -167,7 +167,7 @@ export const tradingModules: TradingClassModule[] = [
         description: "Aprende la diferencia entre órdenes de mercado, límite y stop, así como cuándo cada una encaja mejor.",
         highlights: ["Pip", "Pipette", "Spread"],
         videoUrl: "https://www.youtube.com/embed/2Vv-BfVoq4g",
-        imageUrl: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80",
+        imageUrl: "/images/spread-lotaje.jpeg",
         imageAlt: "Pantalla con análisis de órdenes y gráficos",
         contentBlocks: [
           {
@@ -296,6 +296,107 @@ export const tradingModules: TradingClassModule[] = [
         explanation: "Correcto: controlar el tamaño de cada posición ayuda a proteger tu cuenta y mantener consistencia.",
       },
     ],
+    submodules: [
+      {
+        id: "patrones-velas",
+        title: "Patrones de velas y contextos",
+        description: "Aprende a leer la estructura del precio y a confirmar señales con contexto antes de abrir una operación.",
+        highlights: ["Patrones alcistas y bajistas", "Confirmación con contexto", "Lectura del impulso"],
+        videoUrl: "https://www.youtube.com/embed/4X7aQnRjQqU",
+        imageUrl: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=1200&q=80",
+        imageAlt: "Patrones de velas y análisis técnico",
+        contentBlocks: [
+          {
+            title: "Qué observamos en el precio",
+            text: "Los patrones de velas te ayudan a interpretar la presión compradora o vendedora, pero nunca deben leerse de forma aislada. El contexto del mercado, la tendencia y los niveles clave aportan la confirmación necesaria.",
+          },
+          {
+            title: "Confirmación antes de operar",
+            text: "Una vela alcista puede indicar fuerza, pero si aparece en una zona de resistencia o en una tendencia negativa, su valor es limitado. La combinación con estructura, volumen y niveles relevantes mejora la calidad de la señal.",
+          },
+        ],
+        questions: [
+          {
+            id: "medio-patrones-1",
+            statement: "Un patrón de velas por sí solo debe ser suficiente para operar sin más contexto.",
+            answer: false,
+            explanation: "No. El contexto del mercado, la estructura y los niveles clave son esenciales para validar la señal.",
+          },
+          {
+            id: "medio-patrones-2",
+            statement: "Un patrón alcista puede ser más fuerte si se forma cerca de una zona de soporte.",
+            answer: true,
+            explanation: "Sí. La cercanía a zonas de soporte o tendencia favorable puede reforzar la validez de la señal.",
+          },
+        ],
+      },
+      {
+        id: "gestion-tamano",
+        title: "Gestión del tamaño de posición",
+        description: "Controla el riesgo por operación para conservar capital y mantener resultados consistentes a largo plazo.",
+        highlights: ["Riesgo por operación", "Lotaje y tamaño", "Protección del capital"],
+        videoUrl: "https://www.youtube.com/embed/2Vv-BfVoq4g",
+        imageUrl: "https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=1200&q=80",
+        imageAlt: "Gestión del tamaño de posición",
+        contentBlocks: [
+          {
+            title: "Qué es el tamaño de posición",
+            text: "El tamaño de posición indica cuánto capital asumes en cada operación. Se calcula en función del riesgo máximo aceptado, la distancia al stop y el saldo disponible.",
+          },
+          {
+            title: "Por qué importa",
+            text: "La consistencia viene de controlar el riesgo por operación, no de conseguir una serie de ganancias aisladas. Si una operación sale mal, la pérdida no debe afectar a la cuenta de forma desproporcionada.",
+          },
+        ],
+        questions: [
+          {
+            id: "medio-gestion-1",
+            statement: "El tamaño de posición ayuda a limitar la pérdida máxima por operación.",
+            answer: true,
+            explanation: "Sí. Un tamaño bien calculado mantiene el riesgo controlado y protege tu cuenta de variaciones fuertes.",
+          },
+          {
+            id: "medio-gestion-2",
+            statement: "Operar con un riesgo fijo en cada trade es una buena práctica para mantener consistencia.",
+            answer: true,
+            explanation: "Correcto. La gestión del riesgo es una base clave para sostener resultados a mediano plazo.",
+          },
+        ],
+      },
+      {
+        id: "niveles-y-tendencias",
+        title: "Niveles y tendencias",
+        description: "Identifica estructura, zonas de soporte y resistencia, y cómo la tendencia influye en la probabilidad de una operación.",
+        highlights: ["Soportes y resistencias", "Tendencia", "Líneas de estructura"],
+        videoUrl: "https://www.youtube.com/embed/ScMzIvxBSi4",
+        imageUrl: "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?auto=format&fit=crop&w=1200&q=80",
+        imageAlt: "Niveles clave y sentido de tendencia",
+        contentBlocks: [
+          {
+            title: "Tendencia y contexto",
+            text: "La tendencia envía información sobre la dirección dominante del mercado. Operar contra la tendencia puede aumentar el riesgo si no hay una validación clara.",
+          },
+          {
+            title: "Zonas de interés",
+            text: "Los soportes y resistencias representan áreas donde el precio suele reaccionar. Estas zonas ayudan a pensar en puntos de entrada, stop y toma de ganancias con more evidencia.",
+          },
+        ],
+        questions: [
+          {
+            id: "medio-niveles-1",
+            statement: "Las zonas de soporte y resistencia ayudan a identificar áreas de interés.",
+            answer: true,
+            explanation: "Sí. Son regiones donde el precio suele reaccionar y donde se suele buscar lógica operativa.",
+          },
+          {
+            id: "medio-niveles-2",
+            statement: "La tendencia solo importa si el mercado está en una sesión de alta volatilidad.",
+            answer: false,
+            explanation: "No. La tendencia siempre tiene valor como contexto, independientemente de la volatilidad inmediata.",
+          },
+        ],
+      },
+    ],
   },
   {
     id: "avanzado",
@@ -313,6 +414,107 @@ export const tradingModules: TradingClassModule[] = [
         statement: "Controlar las emociones es tan importante como la técnica cuando se opera en vivo.",
         answer: true,
         explanation: "Sí, la disciplina emocional es un factor crítico para ejecutar una estrategia sin cometer errores impulsivos.",
+      },
+    ],
+    submodules: [
+      {
+        id: "psicologia-operativa",
+        title: "Psicología operativa",
+        description: "Entrena tu disciplina emocional y aprender a ejecutar la estrategia sin caer en decisiones impulsivas.",
+        highlights: ["Control emocional", "Disciplina", "Ejecución de plan"],
+        videoUrl: "https://www.youtube.com/embed/ScMzIvxBSi4",
+        imageUrl: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80",
+        imageAlt: "Psicología operativa y disciplina",
+        contentBlocks: [
+          {
+            title: "Rendimiento más que señal",
+            text: "La técnica sin control emocional es insuficiente. Un trader avanzado no solo conoce la estrategia, sino que también regula impulsos, frustración y exceso de confianza.",
+          },
+          {
+            title: "Sistema de ejecución",
+            text: "Una buena ejecución incluye revisar el plan, limitar el riesgo y seguir reglas claras sin reaccionar por la emoción del momento. El proceso es tan importante como la idea.",
+          },
+        ],
+        questions: [
+          {
+            id: "avanzado-psicologia-1",
+            statement: "La disciplina emocional es tan importante como la técnica para operar bien.",
+            answer: true,
+            explanation: "Sí. La ejecución consistente depende tanto del sistema como del control del estado mental.",
+          },
+          {
+            id: "avanzado-psicologia-2",
+            statement: "Si una operación falla, lo mejor es intentar recuperarla de inmediato para compensar la pérdida.",
+            answer: false,
+            explanation: "No. Recuperar pérdidas de forma impulsiva suele empeorar la situación y romper el plan de riesgo.",
+          },
+        ],
+      },
+      {
+        id: "sistemas-y-analisis",
+        title: "Sistemas y análisis multidimensional",
+        description: "Diseña reglas de entrada, gestión y validación para crear un enfoque más robusto y repetible.",
+        highlights: ["Reglas de entrada", "Backtesting", "Validación"],
+        videoUrl: "https://www.youtube.com/embed/4X7aQnRjQqU",
+        imageUrl: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80",
+        imageAlt: "Sistema de trading y análisis",
+        contentBlocks: [
+          {
+            title: "Un sistema operativo",
+            text: "Un sistema avanzado no se basa en una sola señal. Se compone de reglas claras de entrada, salida, gestión del riesgo y validación sobre datos históricos o condiciones reales.",
+          },
+          {
+            title: "Robustez",
+            text: "La clave es que el sistema funcione en distintas condiciones, no solo en momentos favorables. Un plan robusto se mide por su capacidad de seguir siendo útil cuando cambia el mercado.",
+          },
+        ],
+        questions: [
+          {
+            id: "avanzado-sistema-1",
+            statement: "Un buen sistema debe depender de una sola señal para ser útil.",
+            answer: false,
+            explanation: "No. Los sistemas más sólidos suelen combinar varias condiciones y reglas para reducir el ruido.",
+          },
+          {
+            id: "avanzado-sistema-2",
+            statement: "Validar una estrategia con datos históricos ayuda a entender su comportamiento real.",
+            answer: true,
+            explanation: "Sí. La validación aporta contexto sobre consistencia, riesgo y comportamiento en distintos escenarios.",
+          },
+        ],
+      },
+      {
+        id: "automatizacion-y-monitoring",
+        title: "Automatización y monitoreo",
+        description: "Explora cómo automatizar tareas y revisar el rendimiento sin abandonar la supervisión del plan.",
+        highlights: ["Automatización", "Monitoreo", "Ajustes de sistema"],
+        videoUrl: "https://www.youtube.com/embed/2Vv-BfVoq4g",
+        imageUrl: "https://images.unsplash.com/photo-1516321165247-4aa89a48be28?auto=format&fit=crop&w=1200&q=80",
+        imageAlt: "Automatización y supervisión de sistema",
+        contentBlocks: [
+          {
+            title: "Automatización útil",
+            text: "La automatización puede ahorrar tiempo y eliminar errores repetitivos, pero no reemplaza el proceso de revisión y ajuste. Los mercados cambian y la estrategia debe adaptarse.",
+          },
+          {
+            title: "Supervisión constante",
+            text: "Un sistema automatizado requiere revisión de rendimiento, logs y ajustes periódicos. La supervisión humana es parte del control de riesgo y no un obstáculo.",
+          },
+        ],
+        questions: [
+          {
+            id: "avanzado-automatizacion-1",
+            statement: "La automatización puede reemplazar por completo la supervisión humana en cualquier condición del mercado.",
+            answer: false,
+            explanation: "No. Aunque ayuda, la supervisión humana sigue siendo necesaria para ajustar y validar el comportamiento del sistema.",
+          },
+          {
+            id: "avanzado-automatizacion-2",
+            statement: "Revisar el rendimiento de un sistema es clave para detectar problemas o cambios de comportamiento.",
+            answer: true,
+            explanation: "Sí. El monitoreo constante ayuda a mantener la estrategia en consonancia con las condiciones reales del mercado.",
+          },
+        ],
       },
     ],
   },
