@@ -28,26 +28,36 @@ type Trade = {
 type TradeFilter = "all" | TradeMethod
 
 const INITIAL_TRADES: Trade[] = [
-  /*{
-    id: "t1", Ejemplos de como diligenciar el JSON para importar trades
-    date: "2026-08-01",
-    method: "Metodología A",
-    symbol: "EURUSD",
-    entryLink: "https://www.tradingview.com/chart/?symbol=OANDA:EURUSD",
-    pnl: 132.5,
-    notes: "Entrada en pullback con confluencia de soporte.",
+  {
+    id: "t1",
+    date: "2026-11-03",
+    method: "Metodología IA",
+    symbol: "XAUUSD",
+    entryLink: "",
+    pnl: 2.70,
+    notes: "BE Incorrecto",
     outcome: "win",
   },
   {
     id: "t2",
-    date: "2026-08-03",
-    method: "Metodología B",
-    symbol: "XAUUSD",
-    entryLink: "https://www.tradingview.com/chart/?symbol=OANDA:XAUUSD",
-    pnl: -88.2,
+    date: "2026-11-04",
+    method: "Metodología IA",
+    symbol: "EURUSD",
+    entryLink: "",
+    pnl: 2.52,
     notes: "Ruptura falsa, se cerró con pérdida controlada.",
-    outcome: "loss",
-  },*/
+    outcome: "win",
+  },
+  {
+    id: "t3",
+    date: "2026-11-05",
+    method: "Metodología IA",
+    symbol: "GBPUSD",
+    entryLink: "",
+    pnl: 23.76,
+    notes: "BE Correcto",
+    outcome: "win",
+  }
 ]
 
 function parseImportedTrades(rawText: string): Trade[] {
@@ -162,7 +172,7 @@ export function TradeJournal() {
                   Historial de mi trading
                 </Badge>
                 <h1 className="text-3xl font-semibold sm:text-4xl">
-                  Desde el 1 de Septiembre de 2026 hasta hoy, he registrado mis operaciones y resultados en este journal.
+                  Desde el 1 de Noviembre de 2026 hasta hoy, he registrado mis operaciones y resultados en este journal.
                 </h1>
                 <p className="text-sm leading-7 text-slate-300 sm:text-base">
                   Aqui podras ver el historial de mis 2 cuentas en donde implemento mis metodologias de trading, la cuenta personal y la cuenta de fondeo. Dentro de estas puedes ingresar el valor de tu capital y el programa te simulara el rendimiento de tu cuenta en base a mis resultados.

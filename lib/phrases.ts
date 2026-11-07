@@ -123,6 +123,72 @@ export const phrases: Array<{ text: string; author: string }> = [
     text: "La simplicidad es la maxima sofisticacion.",
     author: "Leonardo da Vinci",
   },
+  {
+    text: "Nadie es mejor que tu, solo tienen informacion que tu no tienes",
+    author: "Anonimo",
+  },
+  {
+    text: "La oportunidad es como una diosa altenera, no pierde el tiempo con quien no la merece.",
+    author: "Anonimo"
+  },{
+    text: "Los objetos en movimiento permanecen en movimiento, los objetos en reposo, permaanecen en reposo, el impulso lo es todo en la vida",
+    author: "Anonimo"
+  },{
+    text: "Todo lo que sucede en tu vida es resultado de tu propia responabilidad, no de alguna fuente externa",
+    author: "Anonimo"
+  },
+  {
+    text: "Yo me equivoque y fracase muchas veces pero nunca fue por lo mismo",
+    author: "Anonimo"
+  },
+  {
+    text: "Si no sales a aplicar la informacion, no estuviste entrenando, estuviste entreteniendote",
+    author: "Anonimo"
+  },
+  {
+    text: "arriesgate o te arrepentiras toda la vida",
+    author: "Anonimo"
+  },
+  {
+    text: "Haz mas, mucho mas que suficiente y obtendras los resultados que superan por mucho tus expectativas",
+    author: "Anonimo"
+  },
+  {
+    text: "No voy a ser adicto a la informacion, pero alerjico a la ejecucion",
+    author: "Anonimo"
+  },
+  {
+    text: "Si trabajas por dinero, le estas dando el poder a tu empleador, si aprendes a hacer que el dinero trabaje pora ti, recuperas tu poder",
+    author: "Anonimo"
+  },
+  {
+    text: "Cada reto es un maestro disfrazado",
+    author: "Anonimo"
+  },
+  {
+    text: "Las noches mas oscuras producen las estrellas mas brillantes",
+    author: "Anonimo"
+  },
+  {
+    text: "Un empleado que comete errores tarde o temprano sera despedido, pero un emprendedor que comete errores tarde o temprano sera recompensado",
+    author: "Anonimo"
+  },
+  {
+    text: "No hay habilidad que se resista a la persistencia",
+    author: "Anonimo"
+  },
+  {
+    text: "El vendedor no se quiebra por vender barato, si no por vender poquito",
+    author: "Anonimo"
+  },
+  {
+    text: "Mientras el pobre pierde el tiempo buscando entender, el rico se mete y entiende sobre el camino",
+    author: "Anonimo"
+  },
+  {
+    text: "Ningun marinero experto se hizo en aguas calmas",
+    author: "Anonimo"
+  }
 ]
 
 /**
