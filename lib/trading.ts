@@ -55,7 +55,7 @@ export const tradingModules: TradingClassModule[] = [
         title: "Que es el trading?",
         description: "Trading = comerciar activos financieros con el objetivo de obtener beneficio de las variaciones de precio, tanto cuando suben como cuando bajan.\nAnalogia sencilla: es como comprar en una plaza cuando están baratas y venderlas cuando suben de precio. La diferencia es que en trading no siempre recibes el producto físico, sino que operas sobre su precio.",
         highlights: ["Que es el trading", "Como funciona", "Analogia con comprar y vender productos"],
-        videoUrl: "https://youtu.be/F3-9POWedXk?si=cGQleCsPtWo3KP31",
+        videoUrl: "https://www.youtube.com/embed/F3-9POWedXk?si=dKbFVG6_GpX3qK1q",
         imageUrl: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=1200&q=80",
         imageAlt: "Que es trading y como funciona el mercado financiero",
         contentBlocks: [
